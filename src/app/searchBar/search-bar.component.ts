@@ -4,7 +4,11 @@ import {
   Output,
   EventEmitter
 } from "@angular/core";
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators
+} from '@angular/forms';
 
 @Component({
   selector: 'search-bar',
@@ -14,10 +18,10 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 export class SearchBarComponent implements OnInit {
   searchForm: FormGroup;
-  @Output() nameChanged = new EventEmitter<string>();
+  @Output() nameChanged = new EventEmitter < string > ();
 
-  constructor(private formBuilder: FormBuilder) {
-  }
+  constructor(
+    private formBuilder: FormBuilder) {}
 
   ngOnInit() {
     this.searchForm = this.formBuilder.group({
@@ -26,7 +30,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   onSubmit() {
-    if(this.searchForm.invalid) {
+    if (this.searchForm.invalid) {
       this.searchForm.markAsTouched();
       this.searchForm.updateValueAndValidity();
       return;
