@@ -1,3 +1,4 @@
+import { AboutComponent } from './about/about.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule }  from './app-routing.module';
@@ -11,7 +12,8 @@ import { UsersComponent } from './users/users.component';
   declarations: [
     AppComponent,
     SearchBarComponent,
-    UsersComponent
+    UsersComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
